@@ -22,6 +22,15 @@
 // 
 // Good luck, the future of humanity is in your hands now!
 
-exports.translate = function(number) {
-    //TODO implement me
+
+const c = 3
+
+exports.translate = function (number) {
+    let r = ""
+    while (number !== 0) {
+        r += number % c
+        number = Math.trunc(number / c)
+    }
+    r = r.replace(/0/g, "A").replace(/1/g, "B").replace(/2/g, "C")
+    return r.split("").reverse().join("")
 }
