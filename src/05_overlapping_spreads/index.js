@@ -51,5 +51,3 @@ exports.overlappingSpreads = function (data) {
     const duplicates = findDuplicates(newArray)
     return duplicates.reduce((a, b) => Number(a) + Number(b), 0)
 }
-
-//overlappingSpreads([-3, 5, 8, -1, 6, 11])

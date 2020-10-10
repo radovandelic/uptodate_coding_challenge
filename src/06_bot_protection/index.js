@@ -14,6 +14,14 @@
 // 
 // we can see that the sequence "jump fire back" is repeated two times.
 
-exports.botProtection = function(data) {
-    //TODO implement me
+exports.botProtection = function (data) {
+    const sequences = {}
+    for (let i = 0; i < data.length - 2; i++) {
+        const sequence = data[i] + data[i + 1] + data[i + 2]
+        if (sequences[sequence]) {
+            return true
+        }
+        sequences[sequence] = 1
+    }
+    return false
 }
