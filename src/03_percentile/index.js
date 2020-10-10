@@ -15,6 +15,8 @@
 // If you sort the array, index should tell you the starting element of a subarray that is needed. In our example
 // the result is array with element 9.
 
-exports.percentile = function(percentile, data) {
-    //TODO implement me
+exports.percentile = function (percentile, data) {
+    const index = Math.floor(percentile * data.length / 100)
+    data.sort()
+    return data.slice(index)
 }
